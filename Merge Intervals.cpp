@@ -12,9 +12,9 @@ vector<Interval> Solution::insert(vector<Interval> &intervals, Interval newInter
    }
    Interval s;
    if(i!=intervals.size() && intervals[i].start<newInterval.start )
-        s.start=intervals[i].start;
-    else if(i!=intervals.size())
         s.start=newInterval.start;
+    else if(i!=intervals.size())
+        s.start=intervals[i].start;
    if(i==intervals.size())
    {    s.start=newInterval.start;
         s.end=newInterval.end;
